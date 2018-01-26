@@ -1,79 +1,88 @@
 var dataBase = [{
-    name: "name",
-    email: "email",
-    pass: "pass",
+    "ID": "ID",
+    "pass": "pass"
 }];
-var emailInTrue;
+var IDInTrue;
 var passInTrue;
-var jqxhr = $.getJSON("database.json", function (data) {
-    
-})
+var checkTName = false;
+var checkTID = false;
+var checkTPass = false;
+var checkTRePass = false;
+var signUpID = "ID";
+var signUpPass = "pass";
 
-console.log(jqxhr)
 $(document).ready(function () {
 
     $("#signIn").click(function () {
-        var input_EmailIn = $("#inputEmailIn").val();
+        var input_IDIn = $("#inputIDIn").val();
         var input_PasswordIn = $("#inputPasswordIn").val();
-      
-        var signUpEmail = dataBase[0].email;
-        var signUpPass = dataBase[0].pass;
 
 
-        if (input_EmailIn === signUpEmail) {
-            emailInTrue = 1
+
+        if (input_IDIn === signUpID) {
+            $("#err-ID").hide(1000);
+            IDInTrue = 1
 
         } else {
 
-            alert("Email ไม่ถูกต้อง")
+            $("#err-ID").show(1000);
         }
-
         if (input_PasswordIn === signUpPass) {
-
+            $("#err-Pass").hide(1000);
             passInTrue = 1
-        } else { alert("Password ไม่ถูกต้อง"); }
-
-        if (emailInTrue = passInTrue) {
-            alert('Ok')
-        } else { alert("กรุณากรอกข้อมูล"); }
+        } else {
+            $("#err-Pass").show(1000);
+        }
 
 
 
-    }),
-        $("#signUp").click(function () {
-
-            var input_NameUp = $("#inputName").val();
-            var input_EmailUp = $("#inputEmailUp").val();
-            var input_PasswordUp = $("#inputPasswordUp").val();
-            var input_Re_PasswordUp = $("#inputRe-PasswordUp").val();
-            // var checkTrueUp = $("#checkTrueUp").val();
-
-            // if (checkTrueUp !== true) {
-            //     alert("ควย")
-            // }
-            if (input_PasswordUp !== input_Re_PasswordUp) {
-                alert("Password ไม่ตรงกัน")
-                // if (checkTrueUp !== true) {
-                //     alert("a")
-                // } 
+        if (IDInTrue = passInTrue) {
+            window.location.href = "./home.html";
+        } else { }
 
 
-            } else {
-                var addData = {
-                    name: input_NameUp,
-                    email: input_EmailUp,
-                    pass: input_PasswordUp,
-                    rePass: input_Re_PasswordUp,
-                };
 
-                dataBase.push(addData);
-                console.log(dataBase[0].name);
+    }
+    );
+    $("#signUp").click(function () {
 
-            }
+        var input_NameUp = $("#inputName").val();
+        var input_IDUp = $("#inputIDUp").val();
+        var input_PasswordUp = $("#inputPasswordUp").val();
+        var input_Re_PasswordUp = $("#inputRe-PasswordUp").val();
+        // var checkTrueUp = $("#checkTrueUp").val();
 
+
+
+        if (input_PasswordUp === input_Re_PasswordUp) {
+            $("#err-RePass-R").hide(1000);
+
+            var addData = {
+                "name": input_NameUp,
+                "ID": input_IDUp,
+                "pass": input_PasswordUp,
+                "rePass": input_Re_PasswordUp,
+            };
+
+            dataBase.push(addData);
+            console.log(dataBase);
+            $("#pageSignIn").show(1000);
+            $("#pageSignUp").hide(1000);
+            signUpID = dataBase[1].ID;
+            signUpPass = dataBase[1].pass;
+
+        } else {
+            $("#err-RePass-R").show(1000);
 
         }
-        )
+
+
+    }
+    );
+    $(" #goSignUp").click(function () {
+        $("#pageSignUp").show(1000);
+        $("#pageSignIn").hide(1000);
+    })
 }
 )
 
