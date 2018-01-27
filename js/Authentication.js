@@ -37,7 +37,7 @@ $(document).ready(function () {
 
 
         if (IDInTrue = passInTrue) {
-            window.location.href = "./home.html";
+            window.location.href = "profile.html";
         } else { }
 
 

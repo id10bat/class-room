@@ -29,21 +29,21 @@ html {
 /* First image (Logo. Full height) */
 
 .bgimg-1 {
-  background-image: url('image/5950852-picture-wallpaper.jpg');
+  background-image: url('../image/5950852-picture-wallpaper.jpg');
   min-height: 100%;
 }
 
 /* Second image (Portfolio) */
 
 .bgimg-2 {
-  background-image: url("image/991f38536089f9b6ec06a53fce93ef76.jpg");
+  background-image: url("../image/991f38536089f9b6ec06a53fce93ef76.jpg");
   min-height: 400px;
 }
 
 /* Third image (Contact) */
 
 .bgimg-3 {
-  background-image: url("image/8d572cb468a057d13ffe4b9ac0bdf88e.jpg");
+  background-image: url("../image/8d572cb468a057d13ffe4b9ac0bdf88e.jpg");
   min-height: 400px;
 }
 
