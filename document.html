@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="http://cdn.devdocs.io/assets/application-d3c07d1697f8c35f8c8f7d23efe341f3933043b10ff55b94c38d6561611fe96f.css">
+</head>
+
+<body>
+    <div class="_app">
+        <!-- ช่องค้นหา -->
+        <header class="_header" role="banner">
+            <button type="button" aria-label="Toggle navigation" class="_header-btn" data-toggle-sidebar="" hidden="">
+                <svg viewBox="0 0 24 24">
+                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+                </svg>
+            </button>
+            <form class="_search" role="search">
+                <input type="search" name="q" class="_search-input" placeholder="Search…" autocomplete="off" autocapitalize="off" autocorrect="off"
+                    spellcheck="false" maxlength="30" aria-label="Search">
+                <button type="reset" class="_search-clear" title="Clear search">Clear search</button>
+                <div class="_search-tag"></div>
+            </form>
+            <!-- จุด3จุด -->
+            <button type="button" aria-label="Back" class="_header-btn" data-back="" hidden="">
+                <svg viewBox="0 0 24 24">
+                    <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path>
+                </svg>
+            </button>
+            <button type="button" aria-label="Forward" class="_header-btn _forward-btn" data-forward="" hidden="">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"></path>
+                </svg>
+            </button>
+            <button type="button" aria-label="Toggle menu" title="Toggle menu" class="_header-btn _menu-btn" data-toggle-menu="">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path>
+                </svg>
+            </button>
+            <!-- menu ตั้งค่า -->
+            <nav class="_menu" role="navigation">
+                <h1 class="_menu-title">
+                    <a href="/" class="_menu-title-link">Document</a>
+                </h1>
+                <a href="/settings" class="_menu-link">Preferences</a>
+                <a href="/offline" class="_menu-link">Offline Data</a>
+                <a href="/news" class="_menu-link">Changelog</a>
+                <a href="/help" class="_menu-link">Guide</a>
+                <a href="/about" class="_menu-link">About</a>
+            </nav>
+        </header>
+        <section class="_sidebar" tabindex="-1">
+            <div role="navigation" class="_list">
+                <a href="#" class="_list-item _icon-css _list-dir" data-slug="css" title="CSS" tabindex="-1">
+                    <svg class="_list-arrow"></svg>
+                    <span class="_list-text">CSS</span>
+                </a>
+                <a href="#" class="_list-item _icon-dom _list-dir" data-slug="dom" title="DOM" tabindex="-1">
+                    <svg class="_list-arrow"></svg>
+                    <span class="_list-text">DOM</span>
+                </a>
+                <a href="#" class="_list-item _icon-dom_events _list-dir" data-slug="dom_events" title="DOM Events" tabindex="-1">
+                    <svg class="_list-arrow"></svg>
+                    <span class="_list-text">DOM Events</span>
+                </a>
+                <a href="#" class="_list-item _icon-html _list-dir" data-slug="html" title="HTML" tabindex="-1">
+                    <svg class="_list-arrow"></svg>
+                    <span class="_list-text">HTML</span>
+                </a>
+                <a href="#" class="_list-item _icon-http _list-dir" data-slug="http" title="HTTP" tabindex="-1">
+                    <svg class="_list-arrow"></svg>
+                    <span class="_list-text">HTTP</span>
+                </a>
+                <a href="#" class="_list-item _icon-javascript _list-dir" data-slug="javascript" title="JavaScript" tabindex="-1">
+                    <svg class="_list-arrow"></svg>
+                    <span class="_list-text">JavaScript</span>
+                </a>
+            </div>
+        </section>
+    </div>
+
+</body>
+
+</html>
